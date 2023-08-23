@@ -1,0 +1,16 @@
+{% extends 'core/model.html' %}
+
+{% block content %}
+<div>
+    {% for obj in object %}
+    <h4 class="t">{{obj.title}}</h4>
+    <p class="p">{{obj.text|linebreaksbr  }}</p>
+    {% endfor %}
+</div>
+{% if page_obj.has_previous %}
+<a href="?page={{ page_obj.next_page_number }}">anterior</a>
+{% endif %}
+{% if page_obj.has_next %}
+<a href="?page={{ page_obj.next_page_number }}">proximo</a>
+{% endif %}
+{% endblock content %}

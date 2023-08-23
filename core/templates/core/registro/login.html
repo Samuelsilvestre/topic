@@ -1,0 +1,10 @@
+{% extends 'core/model.html' %}
+{% block content %} 
+<h3 class="t">Login</h3>
+<form action="" class="form" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="adicionar" class="btn">
+</form>
+{% endblock content %} 
+
